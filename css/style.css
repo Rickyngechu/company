@@ -1,0 +1,305 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  color: #333;
+  text-rendering: optimizeLegibility;
+}
+
+:root {
+  --color-grey-1: #f7f7f7;
+  --color-grey-2: #fff;
+
+  --color-grey-light: #ddd;
+  --color-grey-dark: #bbb;
+
+  --color-primary-light: #090909;
+  --color-primary-dark: #000;
+}
+
+/*Utilities*/
+.margin-bottom-small {
+  margin-bottom: 4rem;
+}
+.margin-bottom-medium {
+  margin-bottom: 5rem;
+}
+.margin-bottom-large {
+  margin-bottom: 8rem;
+}
+h1 {
+  font-size: 8rem;
+  font-weight: 200;
+  color: var(--color-grey-light);
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+h3 {
+  font-size: 2.3rem;
+  font-weight: 200;
+  text-align: center;
+}
+h4 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+h5 {
+  font-size: 1.5rem;
+}
+
+/*-------------------------------------------------*/
+/*-----STYLING THE HEADER SECTION------------------*/
+/*-------------------------------------------------*/
+.header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url(../img/mac.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* The navigation section */
+.navigation {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 0.5rem -0.5rem #000;
+}
+.navigation__logo {
+  padding: 2rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+.navigation__list {
+}
+.navigation__link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #000;
+  padding: 2rem;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.navigation__link:hover {
+  background-color: var(--color-grey-dark);
+  color: #000;
+}
+
+.hero {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero__text {
+  font-size: 2rem;
+  color: var(--color-grey-light);
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--color-grey-light);
+  padding: 1.5rem 2rem;
+  font-size: 1.8rem;
+  border-radius: 100rem;
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: all 0.2s;
+}
+.btn:hover {
+  background-color: var(--color-grey-dark);
+}
+.btn:active {
+  transform: translate(-1px);
+}
+.hero__social {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+.social__link {
+  text-decoration: none;
+  color: var(--color-grey-light);
+  padding: 0.7rem;
+  font-size: 1.5rem;
+}
+.social__link:hover {
+  color: var(--color-grey-dark);
+}
+
+/*-------------------------------------------------*/
+/*-----STYLING THE ABOUT SECTION------------------*/
+/*-------------------------------------------------*/
+.section__about {
+  padding: 10rem 0;
+  /* height: 100rem; */
+  background-color: var(--color-grey-2);
+}
+.about__features {
+  max-width: 114rem;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-column-gap: 3rem;
+}
+.features {
+  display: grid;
+  justify-items: center;
+  padding: 0.5rem;
+  align-items: center;
+  grid-template-rows: 1fr repeat(2, min-content);
+  grid-row-gap: 4rem;
+  /* background-color: orangered; */
+}
+.features i {
+  font-size: 8rem;
+}
+.features__text {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/*-------------------------------------------------*/
+/*-----STYLING THE ABOUT SECTION------------------*/
+/*-------------------------------------------------*/
+.section__more {
+  padding: 10rem 0;
+  background-color: var(--color-grey-1);
+}
+.more {
+  display: grid;
+  max-width: 114rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+.more--text {
+  display: block;
+  width: 50%;
+  font-size: 1.6rem;
+}
+.image img {
+  object-fit: cover;
+  width: 90%;
+}
+.btn-more {
+  text-decoration: none;
+  background-color: var(--color-primary-light);
+  color: var(--color-grey-1);
+  transition: all 0.3s;
+}
+.btn-more:hover {
+  background-color: var(--color-grey-dark);
+  color: var(--color-primary-dark);
+}
+
+/*-------------------------------------------------*/
+/*-----STYLING THE TEAM SECTION------------------*/
+/*-------------------------------------------------*/
+.section__team {
+  padding: 13rem 0;
+  background-color: var(--color-grey-2);
+}
+.team-cont {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 1.5rem;
+}
+
+.team {
+  background-color: var(--color-grey-1);
+  border-radius: 3px;
+  box-shadow: 0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+.team img {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+.team__details {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 1.5rem;
+  padding: 1rem;
+  align-items: center;
+  justify-items: start;
+}
+.team--text {
+  font-size: 1.5rem;
+}
+.btn-team {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 100rem;
+  font-size: 1.6rem;
+  background-color: var(--color-primary-light);
+  color: var(--color-grey-1);
+  transition: all 0.2s;
+}
+.btn-team:hover {
+  background-color: var(--color-grey-dark);
+  color: var(--color-primary-dark);
+}
+
+/*-------------------------------------------------*/
+/*-----STYLING THE COUNTER SECTION------------------*/
+/*-------------------------------------------------*/
+.section__counter {
+  padding: 3rem 0;
+  background-color: #444;
+}
+.counter {
+  max-width: 100rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-column-gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+}
+.counter-item {
+  padding: 1rem;
+  color: var(--color-grey-1);
+  font-size: 1.8rem;
+  text-align: center;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 2rem;
+}
+.counter-item span {
+  font-size: 3rem;
+}
+
+/*-------------------------------------------------*/
+/*-----STYLING THE WORK SECTION------------------*/
+/*-------------------------------------------------*/
+.section__work {
+  padding: 5rem 0;
+  height: 30rem;
+}
