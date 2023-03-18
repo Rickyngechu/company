@@ -300,6 +300,52 @@ h5 {
 /*-----STYLING THE WORK SECTION------------------*/
 /*-------------------------------------------------*/
 .section__work {
-  padding: 5rem 0;
-  height: 30rem;
+  padding: 10rem 0;
+  /* height: 30rem; */
+}
+.work {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+.work--item img {
+  width: 100%;
+}
+.work--item img:hover {
+  opacity: 0.7;
+}
+.item-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+.item-2 {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+.item-3 {
+  grid-column: 5 / span 2;
+  grid-row: 1 / span 2;
+}
+.item-4 {
+  grid-column: 7 / span 2;
+  grid-row: 1 / span 2;
+}
+.item-5 {
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 2;
+}
+.item-6 {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 2;
+}
+.item-7 {
+  grid-column: 5 / span 2;
+  grid-row: 3 / span 2;
+}
+.item-8 {
+  grid-column: 7 / span 2;
+  grid-row: 3 / span 2;
 }
