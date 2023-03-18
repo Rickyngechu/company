@@ -9,8 +9,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,600&display=swap"
       rel="stylesheet"
-    />
-    <link
+      class="form__input"
+      <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
@@ -22,7 +22,7 @@
     <title>Code company</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="head">
       <nav class="navigation">
         <a href="#" class="navigation__logo">Logo</a>
         <div class="navigation__list">
@@ -208,6 +208,9 @@
           </div>
         </div>
       </section>
+
+      <!-- THIS IS THE SECTION WORKS -->
+
       <section class="section__work">
         <h2 class="margin-bottom-medium">Our work</h2>
         <h3 class="margin-bottom-small">What we've done for people</h3>
@@ -238,7 +241,156 @@
           </div>
         </div>
       </section>
+
+      <!-- THIS IS THE SECTION SKILLS -->
+
+      <section class="section__skills">
+        <div class="skills">
+          <div class="skills-item skills-item--1">
+            <h5 class="skills-heading">Our skills</h5>
+            <p class="skills-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore.
+            </p>
+            <p class="skills-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore
+            </p>
+          </div>
+          <div class="skills-item skills-item--2">
+            <div class="photography">
+              <i class="fa-solid fa-camera"></i>
+              <p>photography</p>
+              <div class="photo-skill margin-top-small">
+                <div class="progress-1">90%</div>
+              </div>
+            </div>
+            <div class="webdesign">
+              <i class="fa-solid fa-desktop"></i>
+              <p>Web design</p>
+              <div class="web-skill margin-top-small">
+                <div class="progress-2">85%</div>
+              </div>
+            </div>
+            <div class="photoshop">
+              <i class="fa-solid fa-image"></i>
+              <p>Photo</p>
+              <div class="photoshop-skill margin-top-small">
+                <div class="progress-3">75%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THIS IS THE SECTION PRICING -->
+
+      <section class="section__pricing">
+        <h2 class="pricing-heading margin-bottom-small">pricing</h2>
+        <h3 class="pricing-heading margin-bottom-medium">
+          Choose a pricing plan that fits your needs.
+        </h3>
+        <div class="pricing__cards">
+          <div class="pricing__card pricing__card--1">
+            <h5 class="item1-heading">Basic</h5>
+            <p>10GB Storage</p>
+            <p>10 Emails</p>
+            <p>10 Domains</p>
+            <p>Endless support</p>
+            <div>
+              <p>$ 10</p>
+              <p>Per month</p>
+            </div>
+            <a href="#" class="btn-card">Sign up</a>
+          </div>
+          <div class="pricing__card pricing__card--2">
+            <h5 class="item2-heading">Pro</h5>
+            <p>25GB Storage</p>
+            <p>25 Emails</p>
+            <p>25 Domains</p>
+            <p>Endless support</p>
+            <div>
+              <p>$ 25</p>
+              <p>Per month</p>
+            </div>
+            <a href="#" class="btn-card">Sign up</a>
+          </div>
+          <div class="pricing__card pricing__card--3">
+            <h5 class="item3-heading">Premium</h5>
+            <p>50GB Storage</p>
+            <p>50 Emails</p>
+            <p>50 Domains</p>
+            <p>Endless support</p>
+            <div>
+              <p>$ 50</p>
+              <p>Per month</p>
+            </div>
+            <a href="#" class="btn-card">Sign up</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- THIS IS THE SECTION CONTACT -->
+
+      <section class="section__contact">
+        <h2 class="margin-bottom-small">Contact</h2>
+        <h3 class="margin-bottom-small">
+          Lets get in touch. Send us a message:
+        </h3>
+        <div class="contact-1">
+          <div class="contact-1__item">
+            <i class="fa-solid fa-location-dot"></i> <span>Chicago</span>
+          </div>
+          <div class="contact-1__item">
+            <i class="fa-solid fa-phone"></i><span> Phone +25411913060</span>
+          </div>
+          <div class="contact-1__item">
+            <i class="fa-solid fa-envelope"></i
+            ><span>Email:email@gmail.com</span>
+          </div>
+        </div>
+        <div class="form">
+          <form action="#">
+            <input type="text" placeholder="Name" class="form__input" />
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              class="form__input"
+            />
+            <input type="text" placeholder="Subject" class="form__input" />
+            <input type="text" placeholder="Message" class="form__input" />
+
+            <button class="btn-form">
+              <i class="fa-solid fa-paper-plane"></i>
+              send message
+            </button>
+          </form>
+        </div>
+        <div class="hero-2">&nbsp;</div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer-c">
+        <div class="footer-social">
+          <a href="#" class="social__link"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="#" class="social__link">
+            <i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="social__link"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="#" class="social__link"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+        <div class="copyright">All rights reserved &copy; Ricky.exe</div>
+      </div>
+      <div class="scroll-up">
+        <a href="#head" class="btn-scroll">Scroll up</a>
+      </div>
+    </footer>
   </body>
 </html>
