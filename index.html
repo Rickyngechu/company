@@ -24,19 +24,19 @@
   <body>
     <header class="header" id="head">
       <nav class="navigation">
-        <a href="#" class="navigation__logo">Logo</a>
+        <a href="#head" class="navigation__logo">Logo</a>
         <div class="navigation__list">
-          <a href="#" class="navigation__link">About</a>
-          <a href="#" class="navigation__link"
+          <a href="#about" class="navigation__link">About</a>
+          <a href="#team" class="navigation__link"
             ><i class="fa-solid fa-user-plus"></i>Team</a
           >
-          <a href="#" class="navigation__link"
+          <a href="#work" class="navigation__link"
             ><i class="fa-solid fa-briefcase"></i>Work</a
           >
-          <a href="#" class="navigation__link"
+          <a href="#pricing" class="navigation__link"
             ><i class="fa-solid fa-dollar-sign"></i>Pricing</a
           >
-          <a href="#" class="navigation__link"
+          <a href="#contact" class="navigation__link"
             ><i class="fa-solid fa-envelope"></i>Contact</a
           >
         </div>
@@ -46,7 +46,7 @@
         <p class="hero__text margin-bottom-large">
           Stop wasting valuable time with projects that just isn't you.
         </p>
-        <a class="btn">Learn more and start today</a>
+        <button class="btn">Learn more and start today</button>
       </div>
       <div class="hero__social">
         <a href="#" class="social__link"
@@ -63,7 +63,7 @@
     </header>
     <main>
       <!-- This is the section about -->
-      <section class="section__about">
+      <section class="section section__about" id="about">
         <h2 class="margin-bottom-small">About the company</h2>
         <h3 class="margin-bottom-medium">Key features of our company</h3>
         <div class="about__features">
@@ -104,7 +104,7 @@
 
       <!-- THIS IS THE SECTION MORE -->
 
-      <section class="section__more">
+      <section class="section section__more">
         <div class="more">
           <div class="more--1">
             <h4 class="margin-bottom-medium">We know design</h4>
@@ -126,7 +126,7 @@
 
       <!-- THIS IS THE SECTION TEAMS -->
 
-      <section class="section__team">
+      <section class="section section__team" id="team">
         <h2 class="margin-bottom-small">The team</h2>
         <h3 class="margin-bottom-small">The ones who run this company</h3>
         <div class="team-cont">
@@ -188,7 +188,7 @@
           </div>
         </div>
       </section>
-      <section class="section__counter">
+      <section class="section section__counter">
         <div class="counter">
           <div class="counter-item">
             <span>45 <sup>&plus;</sup></span>
@@ -211,7 +211,7 @@
 
       <!-- THIS IS THE SECTION WORKS -->
 
-      <section class="section__work">
+      <section class="section section__work" id="work">
         <h2 class="margin-bottom-medium">Our work</h2>
         <h3 class="margin-bottom-small">What we've done for people</h3>
         <div class="work">
@@ -244,7 +244,7 @@
 
       <!-- THIS IS THE SECTION SKILLS -->
 
-      <section class="section__skills">
+      <section class="section section__skills">
         <div class="skills">
           <div class="skills-item skills-item--1">
             <h5 class="skills-heading">Our skills</h5>
@@ -285,7 +285,7 @@
 
       <!-- THIS IS THE SECTION PRICING -->
 
-      <section class="section__pricing">
+      <section class="section section__pricing" id="pricing">
         <h2 class="pricing-heading margin-bottom-small">pricing</h2>
         <h3 class="pricing-heading margin-bottom-medium">
           Choose a pricing plan that fits your needs.
@@ -332,7 +332,7 @@
 
       <!-- THIS IS THE SECTION CONTACT -->
 
-      <section class="section__contact">
+      <section class="section section__contact" id="contact">
         <h2 class="margin-bottom-small">Contact</h2>
         <h3 class="margin-bottom-small">
           Lets get in touch. Send us a message:
@@ -389,8 +389,9 @@
         <div class="copyright">All rights reserved &copy; Ricky.exe</div>
       </div>
       <div class="scroll-up">
-        <a href="#head" class="btn-scroll">Scroll up</a>
+        <button class="btn-scroll">Scroll up</button>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

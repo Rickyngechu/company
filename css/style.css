@@ -72,7 +72,13 @@ h4 {
 h5 {
   font-size: 1.5rem;
 }
-
+.section {
+  transition: all 0.5s ease-in;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
 /*-------------------------------------------------*/
 /*-----STYLING THE HEADER SECTION------------------*/
 /*-------------------------------------------------*/
@@ -82,6 +88,7 @@ h5 {
     url(../img/mac.jpg);
   background-position: center;
   background-size: cover;
+  position: relative;
 }
 
 /* The navigation section */
@@ -92,6 +99,19 @@ h5 {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+  box-shadow: 0 0.5rem 0.5rem -0.5rem #000;
+}
+.sticky {
+  position: fixed;
+  background-color: orangered;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  z-index: 100;
   box-shadow: 0 0.5rem 0.5rem -0.5rem #000;
 }
 .navigation__logo {
@@ -114,7 +134,13 @@ h5 {
 }
 .navigation__link:hover {
   background-color: var(--color-grey-dark);
+  border-radius: 100rem;
   color: #000;
+}
+.is--active {
+  background-color: var(--color-grey-dark);
+  color: #000;
+  border-radius: 100rem;
 }
 
 .hero {
@@ -131,8 +157,11 @@ h5 {
 }
 .btn {
   display: inline-block;
+  border: none;
+  outline: none;
   text-decoration: none;
   background-color: var(--color-grey-light);
+  color: var(--color-primary-dark);
   padding: 1.5rem 2rem;
   font-size: 1.8rem;
   border-radius: 100rem;
@@ -194,7 +223,7 @@ h5 {
 }
 
 /*-------------------------------------------------*/
-/*-----STYLING THE ABOUT SECTION------------------*/
+/*-----STYLING THE MORE SECTION------------------*/
 /*-------------------------------------------------*/
 .section__more {
   padding: 10rem 0;
@@ -542,7 +571,7 @@ h5 {
 /*-----STYLING THE CONTACT SECTION------------------*/
 /*-------------------------------------------------*/
 .section__contact {
-  padding: 15rem 0;
+  padding: 10rem 0;
   background-color: var(--color-grey-2);
 }
 .contact-1 {
@@ -616,7 +645,8 @@ h5 {
 }
 .btn-scroll {
   text-decoration: none;
-  /* border-radius: 90%; */
+  border: none;
+  outline: none;
   border-radius: 100rem;
   padding: 2rem;
   background-color: var(--color-grey-1);
@@ -626,4 +656,51 @@ h5 {
 }
 .btn-scroll:hover {
   background-color: var(--color-grey-light);
+}
+
+@media only screen and (max-width: 1200px) {
+  .section__about {
+    padding: 7rem 5rem;
+  }
+  .section__more {
+    padding: 10rem 5rem;
+  }
+  .section__counter {
+    padding: 3rem 5rem;
+  }
+  .section__skills {
+    padding: 7rem 5rem;
+  }
+  .section__pricing {
+    padding: 10rem 5rem;
+  }
+  .section__contact {
+    padding: 10rem 5rem;
+  }
+  .section__work {
+    padding: 7rem 4rem;
+  }
+  .section__team {
+    padding: 7rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .more {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-row-gap: 4rem;
+  }
+  .more--text {
+    width: 80%;
+  }
+  .image img {
+    width: 100%;
+  }
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-row-gap: 4rem;
+  }
+  html {
+    font-size: 60.5%;
+  }
 }
