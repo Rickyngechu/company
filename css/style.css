@@ -122,6 +122,7 @@ h5 {
   display: block;
 }
 .navigation__list {
+  display: inline-block;
 }
 .navigation__link {
   text-decoration: none;
@@ -141,6 +142,70 @@ h5 {
   background-color: var(--color-grey-dark);
   color: #000;
   border-radius: 100rem;
+}
+
+/*--------------------------------------------*/
+/*THIS IS THE STYLING OF THE MOBILE VERSION NAVIGATION*/
+/*--------------------------------------------------*/
+
+.mobile {
+  position: fixed;
+  visibility: hidden;
+  width: 0;
+  height: 100%;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-content: center;
+}
+.mobile-nav {
+  position: fixed;
+  visibility: hidden;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 50%;
+  background-color: var(--color-grey-dark-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+.mobile-link {
+  margin-bottom: 4rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+}
+.close-btn {
+  font-size: 5rem;
+  color: #fff;
+  align-self: flex-end;
+}
+.mobile-in {
+  width: 50%;
+}
+.mobile-nav-btn {
+  position: relative;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.mobile-nav-btn span {
+  position: relative;
+  display: block;
+  top: 0.5rem;
+  left: 0;
+  height: 3px;
+  width: 4.5rem;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  background-color: #000;
+  transition: all 0.2;
 }
 
 .hero {
@@ -202,7 +267,7 @@ h5 {
   max-width: 114rem;
   display: grid;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-column-gap: 3rem;
 }
 .features {
@@ -212,7 +277,6 @@ h5 {
   align-items: center;
   grid-template-rows: 1fr repeat(2, min-content);
   grid-row-gap: 4rem;
-  /* background-color: orangered; */
 }
 .features i {
   font-size: 8rem;
@@ -268,9 +332,9 @@ h5 {
   max-width: 114rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-column-gap: 2rem;
-  grid-row-gap: 1.5rem;
+  grid-row-gap: 7rem;
 }
 
 .team {
@@ -658,6 +722,12 @@ h5 {
   background-color: var(--color-grey-light);
 }
 
+@media only screen and (min-width: 1200px) {
+  .mobile-nav-btn {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .section__about {
     padding: 7rem 5rem;
@@ -683,6 +753,9 @@ h5 {
   .section__team {
     padding: 7rem 5rem;
   }
+  .mobile-nav-btn {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -702,5 +775,19 @@ h5 {
   }
   html {
     font-size: 60.5%;
+  }
+  .navigation__list {
+    display: none;
+  }
+  .mobile-nav-btn {
+    display: block;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 5rem;
+  }
+  .hero {
+    width: 90%;
   }
 }

@@ -438,6 +438,12 @@
 
 /////////////////////////////////////////////////
 ///Implementing the smooth scrolling effect
+const openMb = document.querySelector(".mobile-nav-btn");
+const closeMb = document.querySelector(".close-btn");
+const mobile = document.querySelector(".mobile");
+const mobileNav = document.querySelector(".mobile-nav");
+const mbLink = document.querySelectorAll(".mobile-link");
+
 const section1 = document.querySelector(".section__about");
 const navi = document.querySelector(".navigation");
 const aboutBtn = document.querySelector(".btn");
@@ -526,11 +532,11 @@ document
 ////////////////////////////////////////
 //IMPLEMENTING THE STRICKY NAV USING THE INTESECTION OBSERVER
 const topHeight = navi.getBoundingClientRect().height;
-console.log(topHeight);
+// console.log(topHeight);
 
 const callBack = function (entries) {
   const entry = entries[0];
-  console.log(entry);
+  //   console.log(entry);
   if (!entry.isIntersecting) navi.classList.add("sticky");
   else navi.classList.remove("sticky");
 };
@@ -547,7 +553,7 @@ objObserver.observe(header);
 //INTERSECTION OBSERVER IMPELENTIGN THE HIDDEN PAGES
 const callsect = function (entries, observer) {
   const entry = entries[0];
-  console.log(entry);
+  //   console.log(entry);
 
   if (!entry.isIntersecting) return;
   entry.target.classList.remove("section--hidden");
@@ -563,4 +569,37 @@ const observeSect = new IntersectionObserver(callsect, {
 sections.forEach(function (section) {
   observeSect.observe(section);
   section.classList.add("section--hidden");
+});
+
+////////////////////////////////////////////////////////////
+//CLOSING MODAL
+closeMb.addEventListener("click", function () {
+  mobile.style.width = 0;
+  //   mobile.style.opacity = 0;
+  mobileNav.style.width = 0;
+  mobileNav.style.opacity = 0;
+  mobileNav.style.visibility = "hidden";
+});
+////////////////////////////////////////////////////////////
+//OPENING MODAL
+openMb.addEventListener("click", function (e) {
+  e.preventDefault();
+  mobile.style.width = "100%";
+  mobile.style.visibility = "visible";
+  mobileNav.style.width = "50%";
+  mobileNav.style.opacity = 1;
+  mobileNav.style.visibility = "visible";
+  //   console.log(e.target);
+});
+
+///////////////////////////////////////////////////////////
+//SMOOTH SCROLLING ON THE MOBILE NAVIGATION BAR
+mobileNav.addEventListener("click", function (e) {
+  e.preventDefault();
+  //   console.log(e.target);
+  if (e.target.classList.contains("mobile-link")) {
+    const id = e.target.getAttribute("href");
+    // console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
 });
